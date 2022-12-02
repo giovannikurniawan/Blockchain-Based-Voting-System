@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-admin login detail:
+admin login detail:cd
 email: john@gmail.com
 password: john@gmail.com
 
@@ -38,3 +38,7 @@ REFRESH_TOKEN_SECRET=5f567afa6406225c4a759daae77e07146eca5df8149353a844fa9ab67fb
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
+
+## Tes
+
+Tes123
