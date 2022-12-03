@@ -57,7 +57,7 @@ export default async (req: Request, res: Response) => {
   const plainUserObject = {
     id: user.id,
     name: user.name,
-    citizenshipNumber: user.citizenshipNumber,
+    studentIDNumber: user.studentIDNumber,
     email: user.email,
     admin: user.admin,
   };

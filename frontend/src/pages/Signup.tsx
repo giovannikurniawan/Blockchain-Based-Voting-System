@@ -8,7 +8,7 @@ import axios from "../axios";
 const schema = Yup.object().shape({
   name: Yup.string().min(3).required(),
   email: Yup.string().email("Invalid email").required("Required"),
-  citizenshipNumber: Yup.string().min(4).required(),
+  studentIDNumber: Yup.string().min(4).required(),
   password: Yup.string().min(3).required("Required"),
   confirm: Yup.string()
     .oneOf([Yup.ref("password")], "must be same as password")
@@ -29,17 +29,17 @@ const Signup = (): JSX.Element => {
             initialValues={{
               name: "",
               email: "",
-              citizenshipNumber: "",
+              studentIDNumber: "",
               password: "",
               confirm: "",
             }}
             validationSchema={schema}
-            onSubmit={({ name, email, citizenshipNumber, password }) => {
+            onSubmit={({ name, email, studentIDNumber, password }) => {
               axios
                 .post("/auth/signup", {
                   name,
                   email,
-                  citizenshipNumber,
+                  studentIDNumber,
                   password,
                 })
                 .then((res) => {
@@ -70,14 +70,14 @@ const Signup = (): JSX.Element => {
 
                 <div className="input-container">
                   <input
-                    id="citizenshipNumber"
+                    id="studentIDNumber"
                     type="text"
-                    placeholder="Citizenship Number"
-                    {...getFieldProps("citizenshipNumber")}
+                    placeholder="Student ID Number (NIM)"
+                    {...getFieldProps("studentIDNumber")}
                   />
                   <div className="form-error-text">
-                    {touched.citizenshipNumber && errors.citizenshipNumber
-                      ? errors.citizenshipNumber
+                    {touched.studentIDNumber && errors.studentIDNumber
+                      ? errors.studentIDNumber
                       : null}
                   </div>
                 </div>

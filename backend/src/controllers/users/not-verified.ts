@@ -3,7 +3,7 @@ import { User } from "../../entity/User";
 
 export default async (req: Request, res: Response) => {
   const users = await User.find({
-    select: ["id", "name", "citizenshipNumber", "email"],
+    select: ["id", "name", "studentIDNumber", "email"],
     where: { verified: false },
   });
 

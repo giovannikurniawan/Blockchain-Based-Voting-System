@@ -4,7 +4,7 @@ import axios from "../../axios";
 type User = {
   id: number;
   name: string;
-  citizenshipNumber: string;
+  studentIDNumber: string;
   email: string;
 };
 

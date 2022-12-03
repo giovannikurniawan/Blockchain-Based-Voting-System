@@ -9,7 +9,7 @@ export class User extends BaseEntity {
   name!: string;
 
   @Column({ unique: true })
-  citizenshipNumber!: string;
+  studentIDNumber!: string;
 
   @Column({ length: 180, unique: true })
   email!: string;
